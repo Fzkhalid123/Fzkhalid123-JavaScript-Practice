@@ -1,0 +1,30 @@
+
+3a. Create the text 'My name is:' as a string.
+
+3b. Create your name as a string.
+
+3c. Using concatenation, add the 2 strings from 3a and 3b together to create the text:'My name is: (replace it with your name).
+
+3d. At a restaurant, you order 1 coffee ($5) and 1 bagel ($3). Using math, calculate the total cost, and using concatenation , create the text: `Total Cost: $ __(replace __ with the tota of your calculated).
+
+3e. Do the same thing as 3d, but use a template string and interpolation.
+
+3f. Display the text from 3e in a popup using alert(...);
+
+3g. You order 1 coffee ($5.99) and 1 bagel ($2.95). Using math, calculate the total cost and using concatenation, create the text:
+~Total Cost: $___`.
+
+3h. Do the same thing as 3g, but use a template string and interpolation.
+
+3i. Display the text from 3h in a popup.
+
+3j. Using a multi-line string, create the text from 3h and add a line of text underneath:
+`Thank you, come again!'.Display both lines in a popup.
+
+3k. Using interpolation, create the first line of text (use math to calculate the numbers 4 and 57.88).
+
+3l. Create second line of text'Shipping & handling: $9.98'.
+
+3m. Create third line:'Total before tax: $67.86.
+
+3n. Create fourth line of text: 'Estimated tax (10%) to calculate exact numbers.

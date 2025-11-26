@@ -1,0 +1,39 @@
+
+7a. Create a function called greet that displays the message Hello in the console. Call / run this function a few times using greet().
+
+7b. Contuing from 7a. add a parameter called name to the greet function and display the message Hello ${name}.
+Call the function a few times with different names: greet('Simon') etc.
+
+7c. Try calling greet() without a name it will display 'Hello undefined'. Modify the function so that if 'name is undefined, it will display Hi there! instead.
+
+7d. Create a function 'convertToFahrenheit (celsius)' that takes a number in degrees Celsius and returns a number in degrees Fahrenheit.
+
+- Formula: Fahrenheit = (Celsius * 9 / 5) + 32
+- convertToFahrenheit(25) => 77
+
+7e. Create a function 'convertToCelsius(fahrenheit)' that takes a number in degrees Fahrenheit and returns a number in degrees Celsius. 
+- Formula: Celsius = (Fahrenheit - 32) * 5/9 
+- convertToCelsius(86) => 30
+
+7f. Create a function 'convertTemperature (degrees, unit)' that takes a number and a unit ('C' or 'F'), and converts it into the other unit. convertTemperature(25, 'C') => '77F'
+- convertTemperature(86, 'F') => '30C'
+Note: return a string, and try to reuse the functions from 7d and 7e,
+
+7g Create a function convertLength(length, from, to) that takes a number and a unit ('km' or 'miles') and converts the length to another unit ('km' or 'miles'). Note: 1 mile = 1.6 km (approximately).
+- convertLength(50, 'miles', 'km') => '80 km' 
+- convertLength(32, 'km', 'miles') => '20 miles' 
+- convertLength(50, 'km', 'km') => '50 km'
+7h. Update convertLength to support converting between km, miles, and also feet. Note: 1 mile = 5280 ft, 1 km = 3281 ft (approximately). 
+- convertLength(5, 'miles', 'km') => '8 km'
+- convertLength(5, 'miles', 'ft') => '26400 ft'
+- convertLength(5, 'km', 'ft') => '16405 ft'
+7i. Update convertLength so that if you give it an invalid unit, it will return `Invalid unit: ${unit}`.
+- convertLength(5, 'Ibs', 'Ibs') => 'Invalid unit: lbs'
+
+7j. Create a Calculator project
+- Notice there are lot of suplicated code in the buttons.
+- Create a function updateCalculation and reuse the code.
+
+7k. Create a Cart Quantity project and create function updateCartQuantity and reuse the code.
+
+7l. Modify updateCartQuantity so that if the quantity is invalid, alert(); and then return: this is an early return. An early return makes our code cleaner and we can remove else if / else, exists after if statement if condition is met not executes whole else if / else statements.

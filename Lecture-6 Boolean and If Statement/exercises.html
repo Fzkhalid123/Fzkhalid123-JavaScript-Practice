@@ -1,0 +1,51 @@
+
+
+<!--Lecture - 6  Booleans and If Statement-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Faiz Khalid">
+    <meta name="description" content="Learning about Booleans and If Statement">
+    <title>Variables</title>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+           
+    <script>
+        let hour = 9;
+        if (hour >= 6 && hour <= 12) {
+            console.log('Good morning');
+        } else if (hour > 12 && hour < 18) {
+            console.log('Good afternoon');
+        } else {
+            console.log('Good night');
+        }
+
+        let name = `Faiz Khalid`;
+        if (true) {
+            console.log(`Good morning ${name}`);
+        }
+
+        let age = 2;
+        if (age <= 6 || age >= 65) {
+            console.log('Discount');
+        } else {
+            console.log('No Discount');
+        }
+
+        const isHoliday = true;
+        let age1 = 1;
+        if ((age1 <= 6 || age1 >= 65) && !isHoliday) {
+            console.log('Discount');
+        } else {
+            console.log('No Discount');
+        }
+
+    
+    </script>
+  </body>
+</html>

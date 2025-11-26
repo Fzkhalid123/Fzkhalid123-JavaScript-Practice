@@ -1,0 +1,41 @@
+
+
+9a. Create a <button>9a</button>. Use document.querySelector('button') to get the button from the page, and then display it in the console.
+
+9b. Continuing from 9a, create another button <button>9b</button> below. Using JavaScript, change the text in the second button to '9b done!' (hint: add a class and use .querySelector).
+
+9c. Create 2 buttons 'heads' and 'tails', and a paragraph (<p></p>) underneath. When clicking the 'heads' button, display 'You chose: heads' in the paragraph. When the 'tails' button, display 'You chose: tails'.
+
+heads tails - 2 buttons
+You chose: heads
+
+9d. Create a text box (<input>) and a 'Submit' button. When clicking 'Submit', display `Your name is: ${text}` on the page (${text} = the text inside the text box)
+Simon input - Submit button Upon clicking button it displays message on next line
+Your name is: Simon
+
+9e. Modify previous exercise so that when you press 'Enter' in the <input>, it will also display the same message on the page.
+
+9f. Continuing from 9e, create a function to reuse the code (if you already did this, skip this exercise).
+
+9g. Create a file 9g.html. In the Amazon Shipping Calculator, enter a cost of 7.99 and click 'Calculate'. What issue do you see? Find a fix for this issue.
+7.99 in input - Calculate button
+$17.990000000000002
+
+9h. Let's create the project on the right:
+• Whenever we type in the text box, update the text on the page.
+• To do this, we'll learn another
+event called <input onkeyup="...">.
+onkey
+onkey
+This runs code after we press a key and release it (key comes up).
+
+9i. We'll improve the Cart Quantity project.
+• Make a copy of exercise 71 (see the solution for 71 if needed).
+• Create a paragraph (<p></p>) to display the quantity.
+• Whenever we update the quantity, display it on the page instead of in the console. Also, display the quantity when page first loads.
+buttons - Show Quantity, Add to Cart, +2, +3, +4, +5, Remove from cart, -2, -3
+Cart quantity: 6
+ 
+9j. We'll improve the calculator project. 
+• Whenever we update the calculation, display it on the page instead of in the console.
+• When the page first loads, if a calculation exists in localStorage, display it on the page.

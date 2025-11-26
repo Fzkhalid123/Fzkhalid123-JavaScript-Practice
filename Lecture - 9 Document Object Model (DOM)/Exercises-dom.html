@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Faiz Khalid">
+    <meta name="description" content="Learning Document Object Model">
+    <title>DOM Projects</title>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <p>Amazaon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = Free shipping</p>
+    <br><br>
+    <p><input style="border-color: blue; padding: 5px;" placeholder="Cost of order" class="js-cost-input" onkeydown="
+      calculateTotal();
+    "><button style="margin-left: 10px"
+    onClick = "
+      calculateTotal();
+    ">Calculate</button></p>
+    <p class="js-total-cost"></p><br><br>
+    
+    <p><input style="border-color: blue; padding: 5px;" class="js-text-input" placeholder="Type Something" onkeyup="
+    displayInput();
+    "></p>
+    <p class="js-message"></p>
+    <script>
+       function displayInput() {
+        const inputElement = document.querySelector('.js-text-input');
+        document.querySelector('.js-message').innerHTML = inputElement.value;
+
+      }
+
+       function handleCostKeydown(event) {
+         if (event.key === 'Enter') {
+         calculateTotal();
+    }
+       }
+
+       function calculateTotal() {
+       const inputElement = document.querySelector('.js-cost-input');
+
+       let cost = Number(inputElement.value)* 100;     // convert string to number
+       if (cost < 4000) {
+        cost = cost + 1000;
+       } 
+       document.querySelector('.js-total-cost').innerHTML = `$${cost/100}`;
+
+       }
+
+       function subscribe() {
+         const buttonElement = document.querySelector('.js-subscribe-button');
+         if (buttonElement.innerText === 'Subscribe') {
+            buttonElement.innerHTML = 'Subscribed';
+         } else {
+            buttonElement.innerHTML = 'Subscribe';
+         }
+       }
+    </script>
+  </body>
+</html>  

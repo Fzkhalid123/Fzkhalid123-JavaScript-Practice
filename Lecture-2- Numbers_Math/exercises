@@ -1,0 +1,29 @@
+
+2a. At a restaurant, you order 1 soup for $10, 3 burgers for $8 each, and 1 ice cream for   $5. Use JavaScript to calculate the cost of the order.
+
+2b. You are at a restaurant with 2 friends (3 people in total) and make the same order as 2a. Calculate how much each person pays.
+
+2c. Calculate the total cost of a toaster ($18.50) and 2 shirts ($7.50 each).
+
+2d. Calculate a 10% tax for total in exercise 2c.
+
+2e. Calculate a 20% tax for the total in 2c.
+
+2f. Calculate the cost of the products before shipping and taxes.
+
+2g. Claclulate the total before tax.
+
+2h. Calculate the 10% tax exactly.
+
+2i. Calculate order total at the bottom.
+
+2j. Round a number down from 2.8 to nearest integer. Use Google to search for this method.
+
+2k. Round a number up from 2.2 to nearest integer. Use Google to search for this method.
+
+2l. The temperature is 25^o Celsius. Calculate the temperature in Farenheit.
+
+2m. The temperature is 86^o Celsius. Calculate the temperature in Celsius.
+
+2n. The temperature is -5^o Celsius. Calculate the temperature in Farenheit.
+

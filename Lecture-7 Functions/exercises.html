@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Faiz Khalid">
+    <meta name="description" content="Learning Functions">
+    <title>Functions</title>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <!-- <p>Calculator</p>
+    <p>
+        <button onclick="
+          updateCalculation('1');
+        ">1</button>
+
+        <button onclick="
+          updateCalculation('2');
+        ">2</button>
+
+        <button onclick="
+          updateCalculation('3');
+        ">3</button>
+
+        <button onclick="
+          updateCalculation(' + ');
+        ">+</button>
+    </p>
+    <p>
+        <button onclick="
+          updateCalculation('4');
+            ">4</button>
+
+        <button onclick="
+          updateCalculation('5');
+        ">5</button>
+
+        <button onclick="
+          updateCalculation('6');
+        ">6</button>
+
+        <button onclick="
+          updateCalculation(' - ')
+        ">-</button>
+    </p>
+    <p>
+        <button onclick="
+          updateCalculation('7');
+        ">7</button>
+
+        <button onclick="
+          updateCalculation('8');
+        ">8</button>
+
+        <button onclick="
+          updateCalculation('9');
+        ">9</button>
+
+        <button onclick="
+        updateCalculation(' * ');
+        ">*</button>
+    </p>
+    <p>
+        <button onclick="
+        updateCalculation('0');
+        ">0</button>
+
+        <button onclick="
+        updateCalculation('.');
+        ">.</button>
+
+        <button onclick="
+        calculation = eval(calculation);
+        console.log(calculation);
+        ">=</button>
+
+        <button onclick="
+          updateCalculation(' / ')
+        ">/</button>
+    </p>
+    <p>
+    <button onclick="
+    calculation = '';
+    console.log('Cleared');
+    ">Clear</button>
+    </p>
+
+    <p><a href="https://supersimple.dev/projects/calculator/">Click here</a> to see the final version of project</p> -->
+
+               <!---->
+
+    <!-- <p>Cart Quantity</p>
+    <p>
+        <button onclick="
+            console.log(`Cart quantity: ${cartQuantity}`);
+            ">Show Quantity</button>
+
+        <button onclick="
+            updateCartQuantity(1);
+            ">Add to Cart</button>
+
+        <button onclick="
+            updateCartQuantity(2);
+            ">+2</button>
+            
+        <button onclick="
+            updateCartQuantity(3);
+            ">+3</button>
+
+        <button onclick="
+            updateCartQuantity(4);
+            ">+4</button>
+
+        <button onclick="
+            updateCartQuantity(5);
+            ">+5</button>
+            
+        <button onclick="
+            updateCartQuantity(-1);
+            ">Remove from cart</button>
+
+        <button onclick="
+            updateCartQuantity(-2);
+            ">-2</button>
+  
+        <button onclick="
+            updateCartQuantity(-3);
+            ">-3</button>
+    </p> 
+
+    <button onclick="
+            cartQuantity = 0;
+            console.log('Cart was reset.');
+            console.log(`Cart quantity: ${cartQuantity}`);
+            ">Reset Cart</button>
+ -->
+
+    <p>Cart Quantity</p>
+    <p>
+        <button onclick="
+            console.log(`Cart quantity: ${cartQuantity}`);
+            ">Show Quantity</button>
+
+        <button onclick="
+            updateCartQuantity(1);
+            ">Add to Cart</button>
+
+        <button onclick="
+            updateCartQuantity(2);
+            ">+2</button>
+            
+        <button onclick="
+            updateCartQuantity(3);
+            ">+3</button>
+
+        <button onclick="
+            updateCartQuantity(4);
+            ">+4</button>
+
+        <button onclick="
+            updateCartQuantity(5);
+            ">+5</button>
+            
+        <button onclick="
+            updateCartQuantity(-1);
+            ">Remove from cart</button>
+
+        <button onclick="
+            updateCartQuantity(-2);
+            ">-2</button>
+  
+        <button onclick="
+            updateCartQuantity(-3);
+            ">-3</button>
+    </p> 
+
+        <button onclick="
+            cartQuantity = 0;
+            console.log('Cart was reset.');
+            console.log(`Cart quantity: ${cartQuantity}`);
+            ">Reset Cart</button>
+
+
+   <script>
+
+    /*let calculation = '';
+
+    function updateCalculation(value) {
+        calculation += value;
+        console.log(calculation);
+    }
+
+    let cartQuantity = 0; 
+
+      function updateCartQuantity(change) {
+        if (cartQuantity + change > 10) {
+                alert('The cart is full');
+            } else if (cartQuantity + change < 0) {
+              alert('Not enough items in the cart')
+            } 
+            else {
+                cartQuantity += change;
+                console.log(`Cart quantity: ${cartQuantity}`);
+            }
+      }*/
+
+      let cartQuantity = 0; 
+
+      function updateCartQuantity(change) {
+     //   if (cartQuantity < 0 && cartQuantity === '!, @, #, $, %, ^, &, *, (, ), _, +' ) {
+
+                if (cartQuantity + change > 10) {
+                alert('The cart is full');
+                return;       // early return - makes our code cleaner beacuse we can remove else if / else
+            }  if (cartQuantity + change < 0) {
+              alert('Not enough items in the cart')
+              return;
+            } 
+             
+                cartQuantity += change;
+                console.log(`Cart quantity: ${cartQuantity}`);
+      }
+
+
+     /*   function greet(name) {
+            if (!name) {
+              console.log(`Hello ${name}`);
+           // console.log(`Hi there!`);
+            } else {
+              console.log(`Hello ${name}`);
+            }
+            }
+        greet();  */
+
+      /*  function convertToFahrenheit(celsius) {
+          let fahrenheit;
+          fahrenheit = (celsius * 9 / 5) + 32;
+          return fahrenheit;
+        }
+
+          console.log(convertToFahrenheit(25)); */
+
+         /* function convertToCelsius(fahrenheit) {
+            let celsius = (fahrenheit - 32) * 5/9;
+            return celsius;
+          }
+
+          console.log(convertToCelsius(86)); */
+
+        /*  function convertTemperature(degrees, unit) {
+            if (unit === 'C') {
+               return (degrees * 9 / 5) + 32;
+            } else if (unit === 'F') {
+            return (degrees - 32) * 5/9;
+            } 
+            
+          }
+
+           console.log(convertTemperature(25, 'C'));
+           console.log(convertTemperature(86, 'F')); */
+
+          /* function convertLength(length, from, to) {
+            if (from === 'miles' && to === 'km') {
+              return length * 1.6;
+            } else if (from === 'km' && to === 'miles') {
+              return length * 0.621;
+            } 
+            else if (from === to) {
+              return length;
+            }
+          }
+          
+           console.log(convertLength(50, 'miles', 'km'));
+           console.log(convertLength(Math.ceil(32,'km', 'miles')));
+           console.log(convertLength(50, 'km', 'km'));*/
+
+          /* function convertLength(length, from, to) {
+            if (from === 'miles' && to === 'km') {
+              return length * 1.6 + (' km');
+            } else if (from === 'miles' && to === 'ft') {
+              return length * 5280 + (' ft');
+            } else if (from === 'km' && to === 'ft') {
+              return length * 3281 + (' ft'); 
+            }
+          } 
+          
+           console.log(convertLength(5, 'miles', 'km'));
+           console.log(convertLength(5,'miles', 'ft'));
+           console.log(convertLength(5,'km', 'ft'));*/
+
+          /* function convertLength(length, from, to) {
+            if (from === 'lbs' && to === 'lbs') {
+              return length;
+            } else {
+              return `Invalid unit: ${from}`;
+            }
+          } 
+          
+           console.log(convertLength(5, 'lbs', 'lbs'));
+           console.log(convertLength(5, 'lbs', 'miles'));*/
+
+        </script>
+  </body>
+</html>
