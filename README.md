@@ -1,11 +1,4 @@
 Learning JavaScript - 
-- Variables 
-- Loops and Arrays
-- Functions
-- Document Object Model (DOM)
-- Modules
-- External Libraries
-- Testing etc. with examples
 - 1 JavaScript Basics
 - 2 Numbers and Math
 - 3 Strings
