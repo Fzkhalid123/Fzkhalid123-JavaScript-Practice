@@ -5,7 +5,7 @@ Topics -
 -  Strings
 -  HTML CSS Review, console.log
 -  Variables
--  Booleans and If-Statements
+-  Booleans and If-Statements (Conditional Statements and Operators)
 -  Functions
 -  Objects
 -  Document Object Model (DOM)
