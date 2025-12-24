@@ -2,6 +2,8 @@ import {cart, removeFromCart, calculateCartQuantity, updateQuantity, isValidityQ
 import {products} from "../data/products.js";
 import {formatCurrency} from "./utils/money.js";
 
+hello();
+
 let cartSummaryHTML = "";
 
 cart.forEach((cartItem) => {
@@ -148,7 +150,7 @@ document.querySelectorAll('.js-update-quantity-link').forEach((link) => {
     updateCartQuantity();
     container.classList.remove('is-editing-quantity');
     } else {
-      quantityLabel.innerHTML = newQuantity;   
+      quantityLabel.innerHTML = newQuantity;
       alert('Quantity must be in between 0 and 1000');
     }
   });
@@ -157,17 +159,15 @@ document.querySelectorAll('.js-update-quantity-link').forEach((link) => {
 document.querySelectorAll('.quantity-input').forEach((input) => {
   input.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
-      
-      
 
+      const container = input.parentElement.parentElement;
+      const saveLink = container.querySelector('.js-save-link');
 
-
-
+      saveLink.click(); 
     }
-
   });
 });
- 
+
 function updateCartQuantity() {
 const cartQuantity = calculateCartQuantity();
 
