@@ -11,6 +11,8 @@ const today = dayjs();
 const deliverDate = today.add(7, 'day'); 
 console.log(deliverDate.format('ddd, MMM, D')); 
 
+function renderOrderSummary() {
+
 let cartSummaryHTML = "";
 
 cart.forEach((cartItem) => {
@@ -37,8 +39,6 @@ cart.forEach((cartItem) => {
   const today = dayjs();
   const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
   const dateString = deliveryDate.format('dddd, MMMM D');
-
-
 
   cartSummaryHTML += `
       <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
@@ -150,60 +150,12 @@ document.querySelectorAll('.js-delivery-option').forEach((element) => {
   element.addEventListener('click', () => {
     const {productId, deliveryOptionId} = element.dataset;
     updateDeliveryOption(productId, deliveryOptionId);
+    renderOrderSummary();
+    });
   });
-});
-
-document.querySelectorAll('.js-update-quantity-link').forEach((link) => {
-  link.addEventListener('click', () => {
-    const productId = link.dataset.productId;
-    const container = document.querySelector(`.js-cart-item-container-${productId}`);
-    container.classList.add('is-editing-quantity');
-  });
-}); 
-
-  document.querySelectorAll('.js-save-link').forEach((link) => {
-  link.addEventListener('click', () => {
-    const productId = link.dataset.productId;
-    const container = document.querySelector(`.js-cart-item-container-${productId}`);
-
-    const quantityInput = container.querySelector('.quantity-input');
-    const newQuantity = Number(quantityInput.value);
-
-    updateQuantity(productId, newQuantity);
-
-    const quantityLabel = document.querySelector(`.js-quantity-label-${productId}`);
-    if (newQuantity >= 0 && newQuantity < 1000) {
-    quantityLabel.innerHTML = newQuantity;
-
-    updateCartQuantity();
-    container.classList.remove('is-editing-quantity');
-    } else {
-      quantityLabel.innerHTML = newQuantity;
-      alert('Quantity must be in between 0 and 1000');
-    }
-  });
-});
-
-document.querySelectorAll('.quantity-input').forEach((input) => {
-  input.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-
-      const container = input.parentElement.parentElement;
-      const saveLink = container.querySelector('.js-save-link');
-
-      saveLink.click(); 
-    }
-  });
-});
-
-function updateCartQuantity() {
-const cartQuantity = calculateCartQuantity();
-
-document.querySelector('.js-return-to-home-link').innerHTML = `${cartQuantity} items`;
 }
 
-updateCartQuantity();
-
+renderOrderSummary();
 
 
  
