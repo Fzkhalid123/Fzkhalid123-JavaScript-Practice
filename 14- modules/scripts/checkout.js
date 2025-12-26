@@ -159,8 +159,7 @@ document.querySelectorAll('.quantity-input').forEach((input) => {
     if (event.key === 'Enter') {
       
       
-
-
+      
 
 
     }
