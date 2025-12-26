@@ -1,0 +1,33 @@
+12a. Create a variable called 'add' and save a function inside. This function will console.log(2 + 3); Run the function twice.
+
+12b. Continuing from exercise 12a, create a function runTwice(fun) that takes a function (as a parameter) and runs it twice.
+- runTwice(function() { console.log('12b'); }); => console.log('12b') twice 
+- runTwice(add); => console.log(5) twice
+
+12c. Create the button below. When clicking the button, after 1 second, the text inside the button changes to 'Finished!'.
+Start and Finished! - button
+
+
+12d. Continuing from exercise 12c, modify the button so that when we click it, the text immediately changes to 'Loading...', and then after 1 second, it changes to 'Finished!'.
+Finished!
+
+12e. Create the ‘Add to cart' button below. When clicking this button, display the message 'Added' below the button. Then, after 2 seconds, remove the message.
+Add to cart button when clicked display Added and then removed after 2 seconds.
+
+12f. Continuing from 12e, if we click the button, wait 1 to 1.5 seconds, and then click the button again, notice that the second time, the message disappears very quickly (because the first setTimeout is still running and will make the message disappear very soon).
+- Modify the code so when we click the button, it “refreshes" the 2 second wait time (waits for 2 seconds again and removes message). Hint: you can cancel the previous setTimeout using clearTimeout()
+Add to cart button displays Added when clicked set a new timer when clicking multiple times then remove the message.
+
+12g. Imagine we're creating a messaging app. Use setInterval() and document.title to create the feature on the right (the title changes every 1 second).
+(2) New messages
+
+12h. Continuing from 12g, instead of displaying “(2) New messages" every time, save the number of messages in a variable: let messages = 2; Use the number in the variable to determine what title to display. Create 2 buttons 'Add' / 'Remove' that increase/decrease the 'messages' variable by 1.
+(3) New messages
+Add, Remove button
+
+12i. Continuing from 12h:
+- Don't let 'messages' go below 0.
+- If messages === 0 stop changing the title and display 'App' as the title.
+- When messages > O start changing the title again.
+
+
