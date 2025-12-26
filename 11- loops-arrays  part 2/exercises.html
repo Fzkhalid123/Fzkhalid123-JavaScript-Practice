@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Faiz Khalid">
+    <meta name="description" content="Practicing Exercises">
+    <title>Exercises-Loops and Arrays-Part2</title>
+    <style>
+
+    </style>
+    </head>
+    <body>
+
+        <script>
+         /* function checkArray(a) {
+         for (let i = 0; i < a.length; i++) {
+          const b = a[i];
+          if (b === 'search') {
+           // console.log(i);
+            return i;
+          } 
+          }
+         // console.log(-1);
+         return -1;
+         }
+        
+       console.log(checkArray(['hello', 'world', 'search', 'good']));
+       console.log(checkArray(['not', 'found'])); */
+
+       /* function checkArray(a) {
+         for (let i = 0; i < a.length; i++) {
+          const b = a[i];
+          if (b === 'search') {
+            console.log(i);
+            break;
+          } 
+          }
+         }
+        
+        checkArray(['hello', 'world', 'search', 'good', 'search']); */
+
+        /* function findIndex(array, word) {
+          for (let i = 0; i < array.length; i++) {
+            if (word === array[i]) {
+              return i;
+            }
+          }
+            return -1;
+          }
+        
+        console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'));
+        console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'));
+ */
+        /* function removeEgg(foods) {
+          const result = [];
+          for (let i = 0; i < foods.length; i++) {
+            if (foods[i] === 'egg') {
+              continue;
+            } 
+            result.push(foods[i])
+          }
+          return result;
+        }
+       console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham'])); */
+
+      /*  function removeEgg(foods) {
+          const result = [];
+          let eggRemoved = 0;
+          for (let i = 0; i < foods.length; i++) {
+            if (foods[i] === 'egg' && eggRemoved < 2) {
+              eggRemoved++;
+              continue;
+            } 
+            result.push(foods[i])
+          }
+          return result;
+        }
+       console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham'])); */
+
+      /* function removeEgg(foods) {
+        const reversedFoods = foods.reverse();
+
+        const result = [];
+        let eggsRemoved = 0;
+
+        for (let i = 0; i < reversedFoods.length; i++) {
+          if (reversedFoods[i] === 'egg' && eggsRemoved < 2) {
+            eggsRemoved++;
+            continue;
+          }
+
+          result.push(reversedFoods[i]);
+        }
+        return result.reverse();
+      }
+
+      console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham'])); */
+   
+      /* function removeEgg(foods) {
+        const foodsCopy = foods.slice();  // Alternate solution - foods.slice().reverse() directly - This technique is called method chaining because we use one method after another (chain of methods)
+
+        const reversedFoods = foodsCopy.reverse();
+        const result = [];
+        let eggRemoved = 0;
+       
+        for (let i = 0; i < reversedFoods.length; i++) {
+          if (reversedFoods[i] === 'egg' && eggRemoved < 2) {
+            eggRemoved++;
+            continue;
+          } 
+          result.push(reversedFoods[i]);
+        }
+          return result.reverse();
+        }
+        const foods = ['egg', 'apple', 'egg', 'egg', 'ham']
+        console.log(removeEgg(foods));
+        console.log(foods) */
+
+        function findIndex(array, word) {
+         for (let i = 0; i < array.length; i++) {
+           if (array[i] === word) {
+              return i;
+            }
+          }
+
+          return -1;
+        }
+    
+        function unique(array) {
+          const result = [];
+          for (let i = 0; i < array.length; i++) {
+            const word = array[i];
+            if (findIndex(result, word) === -1) {
+              result.push(word);
+            }
+          }
+          return result;
+        }
+        console.log(unique(['green', 'red', 'blue', 'red']));
+        console.log(unique(['red', 'green', 'green', 'red']));
+
+
+
+
+
+
+
+
+        
+
+
+        
+        </script>
+    </body>
+    </html>
+
