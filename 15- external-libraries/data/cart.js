@@ -76,10 +76,6 @@ export function updateQuantity(productId, newQuantity) {
   saveToStorage();
 }
 
-export function isValidityQuantity(quantity) {
-  return Number.isInteger(quantity) && quantity >= 0 && quantity < 1000;
-}
-
 export function updateDeliveryOption(productId, deliveryOptionId) {
   let matchingItem;
 
