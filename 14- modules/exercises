@@ -51,7 +51,11 @@ Add "click" event listeners to all "Save" links. When clicking "Save", do the op
 - Inside the product Quantity: 2 Update Delete
 - In the header at the top Checkout (3 items)
 
+<<<<<<< HEAD
 14n. Try to come up with more features to add to the "Update" link like: 
 - Add validation (check the new quantity is >= 0 and < 1000) 
 - Add keyboard support (allow updating by pressing 'Enter')
+=======
+14n. Try to come up with more features to add to the "Update" link like: • Add validation (check the new quantity is >= 0 and < 1000) • Add keyboard support (allow updating by pressing 'Enter')
+>>>>>>> a300fbdbf3d271c1d3500f2df63d85c37c9191c7
 
