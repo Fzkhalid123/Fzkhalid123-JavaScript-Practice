@@ -9,7 +9,7 @@ in the format: '<Month> <Day of Month>'
 
 15d. Get a date from DayJS and display it in this format: '<Day of Week>' (The format should be 'Monday', 'Tuesday', etc.)
 
-15e. Create a function isWeekend (date) that takes a DayJS object, and returns whether the date is 'Saturday' or 'Sunday' (hint: use solution from 15d). Test this function with a few different dates.
+15e. Create a function isWeekend (date) that takes a DayJS object, and returns whether the date is 'Saturday' or 'Sunday'. Test this function with a few different dates.
 
 15f. Move isWeekend() into a separate file and use export default. Import this function in another file and run it.
 
