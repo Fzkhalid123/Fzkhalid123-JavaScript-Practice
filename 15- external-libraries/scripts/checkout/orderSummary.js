@@ -2,7 +2,7 @@ import {
   cart,
   removeFromCart,
   updateDeliveryOption,
-  updateQuantity,
+  updateQuantity
 } from "../../data/cart.js";
 import { products, getProduct } from "../../data/products.js";
 import { formatCurrency } from "../utils/money.js";
@@ -15,6 +15,8 @@ import {
 } from "../../data/deliveryOptions.js";
 import { renderPaymentSummary } from "./paymentSummary.js";
 import { renderCheckoutHeader } from "./checkoutHeader.js";
+
+hello();
 
 export function renderOrderSummary() {
   let cartSummaryHTML = "";

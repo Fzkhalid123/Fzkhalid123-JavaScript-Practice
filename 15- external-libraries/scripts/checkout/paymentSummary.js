@@ -27,10 +27,12 @@ export function renderPaymentSummary() {
   const paymentSummaryHTML = `
         <div class="payment-summary-title">
           Order Summary
-        </div>
+        
 
         <div class="payment-summary-row">
-          <div>Items (${cartQuantity}):</div>
+          <div>
+            Items (${cartQuantity}):
+          </div>
           <div class="payment-summary-money">
             $${formatCurrency(productPriceCents)}
           </div>
@@ -51,7 +53,9 @@ export function renderPaymentSummary() {
         </div>
 
         <div class="payment-summary-row">
-          <div>Estimated tax (10%):</div>
+          <div>
+            Estimated tax (10%):
+          </div>
           <div class="payment-summary-money">
             $${formatCurrency(taxCents)}
           </div>
@@ -67,6 +71,7 @@ export function renderPaymentSummary() {
         <button class="place-order-button button-primary">
           Place your order
         </button>
+        </div>
   `;
 
   document.querySelector(".js-payment-summary").innerHTML = paymentSummaryHTML;
