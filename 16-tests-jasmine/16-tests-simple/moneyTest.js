@@ -1,4 +1,4 @@
-import {formatCurrency} from './scripts/money.js';
+import {formatCurrency} from '../../15- external-libraries/scripts/utils/money.js';
 
 console.log('Test suite: formatCurrency');
 
