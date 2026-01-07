@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Faiz Khalid" />
+    <meta name="description" content="Practicing Exercises" />
+    <title>Exercises</title>
+  </head>
+  <body>
+    <script type="module">
+      import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
+      import isSatSun from "./scripts/exercises.js";
+
+      const presentDate = dayjs();
+      const nextDate = presentDate.subtract(1, "month");
+      console.log(presentDate.format("MMMM, dddd"));
+
+      let date = dayjs();
+      console.log(dayjs().format("dddd, MMMM, D"));
+      console.log(isSatSun(date));
+
+      date = dayjs().add(3, "day");
+      console.log(date.format("dddd, MMMM, D"));
+      console.log(isSatSun(date));
+
+      date = dayjs().add(5, "day");
+      console.log(date.format("dddd, MMMM, D"));
+      console.log(isSatSun(date));
+
+      date = dayjs().add(7, "day");
+      console.log(date.format("dddd, MMMM, D"));
+      console.log(isSatSun(date));
+    </script>
+  </body>
+</html>
