@@ -16,4 +16,8 @@ describe('test suite: formatCurrency', () => {
     it('It converts cents into dollars and rounds down', () => {
         expect(formatCurrency(2000.4)).toEqual('20.00');
     });
+
+    it('It ', () => {
+        expect(formatCurrency(2000.4)).toEqual('20.00');
+    });
 });
