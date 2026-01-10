@@ -1,4 +1,6 @@
-let productsHTML = '';
+import { products } from "../data/products.js";
+
+let productsHTML = "";
 
 products.forEach((product) => {
   productsHTML += `
@@ -14,14 +16,14 @@ products.forEach((product) => {
 
             <div class="product-rating-container">
                 <img class="product-rating-stars"
-                  src="images/ratings/rating-${product.rating.stars * 10}.png">
+                  src="${product.getStarUrl()}">
                 <div class="product-rating-count link-primary">
                     ${product.rating.count * 10}
                 </div>
             </div>
 
             <div class="product-price">
-                $${(product.priceCents / 100).toFixed(2)}
+                ${product.getPrice()}
             </div>
 
             <div class="product-quantity-container">
@@ -55,44 +57,47 @@ products.forEach((product) => {
         `;
 });
 
-document.querySelector('.js-products-grid').innerHTML = productsHTML;
+document.querySelector(".js-products-grid").innerHTML = productsHTML;
 
 let timeoutID;
 
-document.querySelectorAll('.js-add-to-cart').forEach((button) => {
-  button.addEventListener('click', () => {
-  // const productId = button.dataset.productId;
+document.querySelectorAll(".js-add-to-cart").forEach((button) => {
+  button.addEventListener("click", () => {
+    // const productId = button.dataset.productId;
 
-  const {productId} = button.dataset;
+    const { productId } = button.dataset;
 
-   let matchingItem;
+    let matchingItem;
 
-   cart.forEach((item) => {
-    if (productId === item.productId) {
-      matchingItem = item;
-    }
-  });
+    cart.forEach((item) => {
+      if (productId === item.productId) {
+        matchingItem = item;
+      }
+    });
 
-  const addedMessage = document.querySelector(`.js-added-to-cart-${productId}`);
+    const addedMessage = document.querySelector(
+      `.js-added-to-cart-${productId}`
+    );
 
-  addedMessage.classList.add('added-to-cart-visible');
+    addedMessage.classList.add("added-to-cart-visible");
 
-  /* setTimeout(() => {
+    /* setTimeout(() => {
     addedMessage.classList.remove('added-to-cart-visible');
   }, 2000); */
 
-  if (timeoutID) {
-    clearTimeout(timeoutID);
-  }
+    if (timeoutID) {
+      clearTimeout(timeoutID);
+    }
 
-  timeoutID = setTimeout(() => {
-     addedMessage.classList.remove('added-to-cart-visible');
-  }, 2000);
-  
+    timeoutID = setTimeout(() => {
+      addedMessage.classList.remove("added-to-cart-visible");
+    }, 2000);
 
-  const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`);
+    const quantitySelector = document.querySelector(
+      `.js-quantity-selector-${productId}`
+    );
 
-  const quantity = Number(quantitySelector.value);
+    const quantity = Number(quantitySelector.value);
 
     if (matchingItem) {
       matchingItem.quantity += quantity;
@@ -102,19 +107,16 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
         quantity: quantity */
 
         productId,
-        quantity
-   });
-  }
+        quantity,
+      });
+    }
 
-  let cartQuantity = 0;
+    let cartQuantity = 0;
 
-  cart.forEach((item) => {
-    cartQuantity += item.quantity;
-  });
+    cart.forEach((item) => {
+      cartQuantity += item.quantity;
+    });
 
-  document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+    document.querySelector(".js-cart-quantity").innerHTML = cartQuantity;
   });
 });
-
-
-  

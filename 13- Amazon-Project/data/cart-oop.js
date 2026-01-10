@@ -1,14 +1,9 @@
-class Cart {
-    cartItems;
-    #localStorageKey;
+function Cart(localStorageKey) {
+    const cart = {
+     cartItems: undefined,
 
-    constructor(localStorageKey) {
-        this.#localStorageKey = localStorageKey;
-        this.#loadFromStorage();
-    }
-
-    #loadFromStorage() {
-        this.cartItems = JSON.parse(localStorage.getItem(this.#localStorageKey));
+     loadFromStorage: function() {
+        this.cartItems = JSON.parse(localStorage.getItem(localStorageKey));
         
         if (!this.cartItems) {
             this.cartItems = [{
@@ -21,13 +16,13 @@ class Cart {
             deliveryOptionId: "2",
         }];
     }
-}
+},
 
-saveToStorage() {
-    localStorage.setItem(this.#localStorageKey, JSON.stringify(this.cartItems));
-}
+saveToStorage: function() {
+    localStorage.setItem(localStorageKey, JSON.stringify(this.cartItems));
+},
 
-addToCart(productId) {
+addToCart: function(productId) {
     let matchingItem;
 
     this.cartItems.forEach((cartItem) => {
@@ -47,9 +42,9 @@ addToCart(productId) {
     }
 
     this.saveToStorage();
-}
+},
 
-removeFromCart(productId) {
+removeFromCart: function(productId) {
     const newCart = [];
 
     this.cartItems.forEach((cartItem) => {
@@ -61,9 +56,9 @@ removeFromCart(productId) {
     this.cartItems = newCart;
 
     this.saveToStorage();
-}
-
-updateDeliveryOption(productId, deliveryOptionId) {
+},
+    
+updateDeliveryOption: function(productId, deliveryOptionId) {
     let matchingItem;
 
     this.cartItems.forEach((cartItem) => {
@@ -75,16 +70,18 @@ updateDeliveryOption(productId, deliveryOptionId) {
     matchingItem.deliveryOptionId = deliveryOptionId;
 
     this.saveToStorage();
-  }
+    }
+};
+
+ return cart;
 }
 
-const cart = new Cart('cart-oop');
-const businessCart = new Cart('cart-business');
+const cart = Cart('cart-oop');
+const businessCart = Cart('cart-business');
 
+cart.loadFromStorage();
 
+businessCart.loadFromStorage();
 
 console.log(cart);
 console.log(businessCart);
-console.log(businessCart instanceof Cart);
-
-
