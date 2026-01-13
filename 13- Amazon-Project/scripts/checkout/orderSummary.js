@@ -1,9 +1,4 @@
-import {
-  cart,
-  removeFromCart,
-  updateDeliveryOption,
-  updateQuantity,
-} from "../../data/cart.js";
+import {cart} from "../../data/cart.js";
 import { products, getProduct } from "../../data/products.js";
 import { formatCurrency } from "../utils/money.js";
 import { hello } from "https://unpkg.com/supersimpledev@1.0.1/hello.esm.js";
@@ -21,7 +16,7 @@ hello();
 export function renderOrderSummary() {
   let cartSummaryHTML = "";
 
-  cart.forEach((cartItem) => {
+  cart.cartItems.forEach((cartItem) => {
     const productId = cartItem.productId;
 
     const matchingProduct = getProduct(productId);
