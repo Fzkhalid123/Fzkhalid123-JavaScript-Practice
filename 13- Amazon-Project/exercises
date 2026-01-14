@@ -1,5 +1,5 @@
 Lesson 13 Exercises - Start the Amazon Project, Intro to Git -
-We'll create the quantity selector step by step (see the screenshot on the right).
+We'll create the quantity selector step by step
 
 • When adding a product to the cart, instead of increasing the quantity by 1, we'll increase the quantity by the number in the selector.
 
